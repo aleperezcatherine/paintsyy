@@ -1,3 +1,35 @@
+
+const SHAPES_AMOUNT = 36;
+const SHAPE_SIZE = 20;
+
+// Seleccionar el contenedor y calcular su tamaño
+const container = document.querySelector(".container");
+const containerWidth = container.offsetWidth;
+const containerHeight = container.offsetHeight;
+
+// Función para crear formas
+function createShape(type) {
+  // Crear la forma
+  const shape = document.createElement("div");
+  shape.classList.add("shape", type);
+
+  // Posicionar aleatoriamente la forma en la pantalla
+  const x = Math.random() * (containerWidth - SHAPE_SIZE -5);
+  const y = Math.random() * (containerHeight - SHAPE_SIZE);
+  shape.style.top = `${y}px`;
+  shape.style.left = `${x}px`;
+
+  // Añadir la forma al contenedor
+  container.appendChild(shape);
+}
+
+// Crear las formas
+for (let i = 0; i < SHAPES_AMOUNT; i++) {
+  createShape("circle");
+  createShape("square");
+  createShape("triangle");
+}
+
 var pantalla = document.querySelector('canvas');
         var pincel = pantalla.getContext('2d');
 
@@ -8,6 +40,8 @@ var pantalla = document.querySelector('canvas');
         var tamahoCuadrado = 30;
         var j = 0;
            
+        
+
         pincel.fillStyle = 'grey';
         pincel.fillRect(0, 0, 400, 400);
 
@@ -81,3 +115,20 @@ pantalla.addEventListener('mouseup', deshabilitarDibujar);
 pantalla.addEventListener('touchend', deshabilitarDibujar);
 
 pantalla.onclick = seleccionarColor;
+
+
+
+const imagenContainer = document.getElementById("imagen-container");
+const imagen = imagenContainer.querySelector("img");
+
+document.addEventListener("mousemove", function(event) {
+
+    const posX = event.clientX;
+    const posY = event.clientY;
+
+    imagenContainer.style.left = (posX-65) + "px";
+    imagenContainer.style.top = (posY+40) + "px";
+
+    imagen.style.top = "block";
+
+});

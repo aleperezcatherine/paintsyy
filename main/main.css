@@ -1,3 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffffe9;
+  }
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .circle {
+    width: 15px;
+    height: 15px;
+    top: 300px;
+    left: 300px;
+    background-color: yellow;
+    animation-name: scale;
+    transform-origin: center;
+  }
+  
+  .square {
+    width: 20px;
+    height: 20px;
+    border-radius: 0%;
+    background-color: #F87171;
+    animation: rotate 3s linear infinite;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #A78BFA transparent;
+    animation: appear 3s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+  } 
+
+
 .resolution
 {
     width: 99%;
@@ -31,8 +114,6 @@
     
 body
 {
-    background: url(https://p4.wallpaperbetter.com/wallpaper/990/956/27/retro-games-neon-hd-wallpaper-preview.jpg);
-    background-repeat: no-repeat;
     background-size: 110vw 110vh;
     display: flex;
     flex-direction: column;
@@ -43,7 +124,6 @@ body
 }
 header
 {
-    background-color: rgb(221, 157, 199);
     width: 100%;
     height: 100%;
 }
@@ -82,9 +162,20 @@ p
 img
 {
     float: right;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     padding: 10px;
     margin-top:0px;
     margin-left: 0px;
+}
+main
+{
+   justify-content: center;
+   position: center;
+   height: 50vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: center;
+   direction: right;
 }
