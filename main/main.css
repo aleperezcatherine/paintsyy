@@ -12,7 +12,7 @@ body {
   }
   
   .shape {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     opacity: 0.8;
     animation-duration: 3s;
@@ -47,6 +47,8 @@ body {
     animation: appear 3s linear infinite;
   }
   
+
+
   @keyframes rotate {
     0% {
       transform: rotate(0deg);
@@ -122,6 +124,11 @@ body
     height: 100vh;
     margin: 0;
 }
+
+canvas {
+  position: absolute;
+}
+
 header
 {
     width: 100%;
@@ -179,3 +186,4 @@ main
    margin-top: center;
    direction: right;
 }
+
