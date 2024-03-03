@@ -1,14 +1,9 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffffe9;
-  }
-  
+
   .container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f4f4f4;
+    width: 100%;
+    height: 150%;
+    background-color: #95eaee;
+    position: absolute;
   }
   
   .shape {
@@ -85,7 +80,7 @@ body {
 
 .resolution
 {
-    width: 99%;
+    width: 100%;
     text-align: center;
 }
 @media(max-width: 767px){
@@ -117,7 +112,8 @@ body {
 body
 {
     background-size: 110vw 110vh;
-    display: flex;
+    display: center;
+    display: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -127,12 +123,15 @@ body
 
 canvas {
   position: absolute;
+  display: flex;
 }
 
 header
 {
-    width: 100%;
-    height: 100%;
+      background-color: rgb(221, 157, 199);
+      width: 100%;
+      height: 100%;
+
 }
 nav
 {
@@ -159,31 +158,20 @@ h1
     color: rgba(0, 0, 0, 0.995);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    position: absolute;
+    margin-left: 560px;
+    display:flex;
 }
-p
-{
-    color: rgba(255, 252, 252, 0.895);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    font-size: xx-large;
-}
-img
-{
-    float: right;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    margin-top:0px;
-    margin-left: 0px;
-}
+
 main
 {
    justify-content: center;
    position: center;
-   height: 50vh;
+   height: 100vh;
    display: flex;
-   justify-content: center;
+   justify-content: 0px;
    align-items: center;
-   margin-top: center;
+   margin-top: 0px;
    direction: right;
 }
 
